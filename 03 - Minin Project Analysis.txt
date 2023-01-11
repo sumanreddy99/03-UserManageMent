@@ -1,0 +1,102 @@
+---------------------------------------------------
+Table Name : COUNTRY_MASTER
+---------------------------------------------------
+
+COUNTRY_ID 		NUMBER		PRIMARY KEY
+COUNTRY_NAME		VARCHAR
+
+--------------------------------------------------
+Table Name : STATES_MASTER
+--------------------------------------------------
+
+STATE_ID			NUMBER		PRIMARY KEY
+STATE_NAME			VARCHAR
+COUNTRY_ID			NUMBER
+
+------------------------------------------------
+Table Name : CITIES_MASTER
+------------------------------------------------
+
+CITY_ID				NUMBER 	PRIMARY KEY
+CITY_NAME			VARCHAR
+STATE_ID			NUMBER
+
+----------------------------------------
+Table Name : USER_DTLS
+----------------------------------------
+
+USER_ID				NUMBER		PRIMARYKEY
+FNAME				VARCHAR
+LNAME				VARCHAR
+EMAIL				VARCHAR	UNIQUE
+PHNO				NUMBER
+DOB					DATE
+GENDER				VARCHAR
+COUNTRY			NUMBER
+STATE				NUMBER
+CITY				NUMBER
+USER_PWD			VARCHAR
+ACC_STATUS			VARCHAR
+
+
+-----------------------
+Entity Classes
+-----------------------
+
+1) Country.java
+2) State.java
+3) City.java
+4) User.java
+
+---------------------------------
+Repository Interfaces
+---------------------------------
+
+1) CountryRepo.java
+2) StateRepo.java
+3) CityRepo.java
+4) UserRepo.java
+
+------------------------------------
+Service interface
+-----------------------------------
+
+	public interface UserMgmtService {
+
+		public String checkEmail (String email);
+
+		public Map<Integer, String> getCountries ( ) ;
+
+		public Map<Integer, String> getStates (Integer countryId);
+
+		public Map<Integer, String> getCities (Integer stateId);
+
+		public String registerUser (User user);
+
+		public String unlockAccount (UnlockAccForm accForm);
+
+		public String login (LoginForm loginForm);
+
+		public String forgotPwd (String email);
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

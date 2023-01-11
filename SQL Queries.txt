@@ -1,0 +1,18 @@
+insert into country_master values(1, 'India');
+insert into country_master values(2, 'Russia');
+
+insert into states_master values(1, 'Telangana' ,1);
+insert into states_master values(2, 'AndhraPradesh' ,1);
+insert into states_master values(3, 'Altay' ,2);
+insert into states_master values(4, 'Amur' ,2); 
+
+insert into cities_master values (1,'Hyderabad',1);
+insert into cities_master values (2,'Warangal',1);
+insert into cities_master values (3,'Vijayawada',2);
+insert into cities_master values (4,'Vizaq',2);
+insert into cities_master values (5,'Barnaul',3);
+insert into cities_master values (6,'Biysk',3);
+insert into cities_master values (7,'Belogorsk',4);
+insert into cities_master values (8,'Blagoveshchensk',4);
+
+
